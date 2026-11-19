@@ -1,0 +1,33 @@
+<section class="stack">
+  <div class="dlg">
+    <header class="dlg-head purple"><h1>My profile</h1></header>
+    <div class="dlg-body stack">
+      <div class="well me">
+        <span id="profile-avatar" class="av big"></span>
+        <p id="profile-summary"></p>
+      </div>
+      <form id="rename-form" class="form" hidden>
+        <h2>Change my name</h2>
+        <label for="rename-input">Display name</label>
+        <input id="rename-input" maxlength="24" required autocomplete="nickname" />
+        <button class="btn primary" type="submit" data-icon="check">Save name</button>
+      </form>
+      <form id="create-form" class="form">
+        <h2 id="create-title"></h2>
+        <p id="create-warning" class="warning" hidden>
+          Only one profile fits on this device. A new profile erases the old profile's saved games,
+          high scores and stats.
+        </p>
+        <label for="create-input">Display name</label>
+        <input
+          id="create-input"
+          maxlength="24"
+          required
+          autocomplete="nickname"
+          placeholder="Type a name"
+        />
+        <button id="create-submit" class="btn primary" type="submit"></button>
+      </form>
+    </div>
+  </div>
+</section>

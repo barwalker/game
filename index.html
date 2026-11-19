@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Puzzle Hub</title>
+    <meta name="theme-color" content="#7bd0c8" />
+    <meta
+      name="description"
+      content="A playful hub of puzzle games that remembers where you left off."
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Puzzle Hub" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="assets/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="assets/icons/icon-180.png" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="assets/fonts/lilita-one-latin.woff2"
+      crossorigin
+    />
+    <link rel="preload" as="image" href="assets/img/bg-sky.webp" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/game.css" />
+  </head>
+  <body>
+    <div id="splash" role="status">
+      <img
+        class="logo"
+        src="assets/img/logo.webp"
+        alt="Puzzle Hub - Logic Games"
+        width="600"
+        height="440"
+      />
+      <img
+        class="hero"
+        src="assets/img/hero.webp"
+        alt=""
+        aria-hidden="true"
+        width="300"
+        height="300"
+      />
+      <div class="load">
+        <div class="loadbar"><i id="splash-fill"></i></div>
+        <p id="splash-text">Loading...</p>
+      </div>
+    </div>
+
+    <header class="hud">
+      <div class="hud-in">
+        <a id="avatar" class="avatar" href="#/profile" aria-label="Profile"
+          ><span class="face"></span><span class="dot" hidden>!</span></a
+        >
+        <div class="pills">
+          <span class="hp"
+            ><i data-icon="coin"></i><span class="sr">Total best score</span
+            ><b id="hud-score">0</b></span
+          >
+          <span class="hp"
+            ><i data-icon="chevrons"></i><span class="sr">Games played</span
+            ><b id="hud-plays">0</b></span
+          >
+          <span class="hp"
+            ><i data-icon="card"></i><span class="sr">Saved games</span
+            ><b id="hud-saved">0</b></span
+          >
+        </div>
+        <a class="sq blue" href="#/settings" aria-label="Settings" data-icon="gear"></a>
+      </div>
+    </header>
+
+    <main id="view" tabindex="-1"></main>
+
+    <nav id="nav" class="tabs" aria-label="Main">
+      <a href="#/statistics" data-route="statistics" aria-label="Leaderboard"
+        ><span class="ti" data-icon="cup"></span><span class="tl">Leaderboard</span></a
+      >
+      <a href="#/" data-route="" aria-label="Home"
+        ><span class="ti" data-icon="house"></span><span class="tl">Home</span></a
+      >
+      <a href="#/profile" data-route="profile" aria-label="Profile"
+        ><span class="ti" data-icon="player"></span><span class="tl">Profile</span></a
+      >
+      <a href="#/settings" data-route="settings" aria-label="Settings"
+        ><span class="ti" data-icon="cog"></span><span class="tl">Settings</span></a
+      >
+    </nav>
+
+    <dialog id="dialog" class="dlg">
+      <form method="dialog">
+        <header class="dlg-head purple">
+          <h2 id="dlg-title"></h2>
+          <button class="sq red" value="cancel" aria-label="Close" data-icon="close"></button>
+        </header>
+        <div class="dlg-body">
+          <p id="dlg-msg"></p>
+          <div id="dlg-actions" class="dlg-actions"></div>
+        </div>
+      </form>
+    </dialog>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <noscript>Puzzle Hub needs JavaScript.</noscript>
+    <script>
+      setTimeout(function () {
+        var t = document.getElementById('splash-text');
+        if (t && document.getElementById('splash'))
+          t.textContent = 'Still loading... check your connection and reload.';
+      }, 10000);
+    </script>
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
+</html>

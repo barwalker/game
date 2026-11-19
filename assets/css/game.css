@@ -1,0 +1,41 @@
+/* Shared styles for the game screen. Games render inside .game-host (a cream dialog body); scope game CSS under it. */
+.game-host {
+  min-height: 55vh;
+}
+.placeholder .facts {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  margin: 1rem 0;
+}
+.placeholder .facts div {
+  padding: 0.7rem 0.9rem;
+  background: var(--cream-d);
+  border-radius: 16px;
+  box-shadow: inset 0 4px 0 rgba(120, 80, 20, 0.14);
+}
+.placeholder dt {
+  font-size: 1rem;
+  color: var(--muted);
+}
+.placeholder dd {
+  margin: 0;
+  font-size: 2.2rem;
+}
+.placeholder .actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.placeholder .actions .btn {
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .placeholder .actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .placeholder .actions .btn {
+    width: auto;
+  }
+}

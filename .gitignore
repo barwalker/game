@@ -1,0 +1,144 @@
+# ---------------------------------------------------------------
+# Puzzle Hub: ignore everything that is not needed to run the app.
+# Shipped files: index.html, manifest.json, service-worker.js, assets/, pages/,
+# games/<id>/ (source, styles, NOTICE, README), README.md
+# ---------------------------------------------------------------
+
+# --- Tests and test output (unit, differential, end-to-end) ---
+tests/
+test/
+__tests__/
+e2e/
+games/*/tests/
+*.test.js
+*.test.mjs
+*.spec.js
+*.spec.mjs
+coverage/
+.nyc_output/
+test-results/
+playwright-report/
+playwright/.cache/
+blob-report/
+screenshots/
+*-shots/
+*.log
+
+# --- Test fixtures / generated reference data and helper builds ---
+fixtures/
+oracle/
+*.fixture.json
+*.fixture.json.gz
+
+# --- AI assistants and agent tooling ---
+.claude/
+.claude-flow/
+CLAUDE.md
+CLAUDE.local.md
+AGENTS.md
+GEMINI.md
+.cursor/
+.cursorrules
+.cursorignore
+.windsurf/
+.windsurfrules
+.aider*
+.continue/
+.codeium/
+.github/copilot-instructions.md
+.copilot/
+.cline/
+.clinerules
+.roo/
+.roomodes
+.kiro/
+.trae/
+.codex/
+.gemini/
+.mcp.json
+.agent/
+.agents/
+.superpowers/
+.serena/
+.taskmaster/
+.specify/
+.memory/
+.ai/
+ai-notes/
+prompts/
+transcripts/
+
+# --- IDE and editor files ---
+.vscode/
+.idea/
+.fleet/
+.history/
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+*.iml
+*.swp
+*.swo
+*~
+\#*\#
+.\#*
+
+# --- Operating-system files ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# --- Dependencies, package managers and build tooling (the app has none) ---
+node_modules/
+.npm/
+.yarn/
+.pnp.*
+.pnpm-store/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+.stylelintcache
+.parcel-cache/
+.cache/
+.tmp/
+tmp/
+temp/
+
+# --- Environment, secrets and local config ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.local
+
+# --- Local servers, logs and scratch/export files ---
+.vercel/
+.netlify/
+.wrangler/
+.firebase/
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.bak
+*.orig
+*.rej
+scratch/
+notes/
+todo.md
+TODO.md
+/tools/
+/skills/
+/games/*/README.md
